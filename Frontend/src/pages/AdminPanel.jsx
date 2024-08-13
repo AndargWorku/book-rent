@@ -30,7 +30,7 @@ const AdminPanel = () => {
   return (
     <div className='min-h-[calc(100vh-120px)] md:flex hidden'>
 
-        <aside className='bg-white min-h-full  w-full  max-w-60 customShadow'>
+        <aside className='bg-[#0B132B] min-h-full  w-full  max-w-60 customShadow'>
         <div className="flex items-center justify-between mb-6 text-blue-700">
           <FaBars  className="cursor-pointer" />
           <div className="flex items-center">
@@ -42,13 +42,13 @@ const AdminPanel = () => {
                  {/***navigation */}       
                 <div>   
                     <nav className='grid p-4'>
-                        <Link to={"dashboard"} className='px-2 py-1 hover:bg-slate-100'>Dashboar</Link>
-                        <Link to={"upload-book"} className='px-2 py-1 hover:bg-slate-100'>upload book</Link>
-                        <Link to={"owner-list"} className='px-2 py-1 hover:bg-slate-100'>Owner list</Link>
-                        <Link to={"books"} className='px-2 py-1 hover:bg-slate-100'>Dashboar</Link>
-                        <Link to={"notfication"} className='px-2 py-1 hover:bg-slate-100'>upload book</Link>
-                        <Link to={"setting"} className='px-2 py-1 hover:bg-slate-100'>setting</Link>
-                        <Link to={"logout"} className='px-2 py-1 hover:bg-slate-100'>logout</Link>
+                        <Link to={"dashboard"} className='px-2 py-1 text-white hover:bg-[#4166d3] hover:text-white'>Dashboar</Link>
+                        <Link to={"upload-book"} className='px-2  text-white py-1 hover:bg-[#4166d3] hover:text-white'>upload book</Link>
+                        <Link to={"owner-list"} className='px-2 py-1 text-white hover:bg-[#4166d3] hover:text-white'>Owner list</Link>
+                        <Link to={"books"} className='px-2 py-1 text-white hover:bg-[#4166d3] hover:text-white'>Dashboar</Link>
+                        <Link to={"notfication"} className='px-2 text-white py-1 hover:bg-[#4166d3] hover:text-white'>upload book</Link>
+                        <Link to={"setting"} className='px-2 py-1 text-white hover:bg-[#4166d3] hover:text-white'>setting</Link>
+                        <Link to={"logout"} className='px-2 py-1  text-whitehover:bg-[#4166d3] hover:text-white'>logout</Link>
                     </nav>
                 </div>  
         </aside>
