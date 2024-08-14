@@ -15,6 +15,8 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
+      "https://book-rent-x75w.vercel.app/",
+      "https://book-rent-x75w.vercel.app",
       "http://localhost:5173",
       "http://localhost:5173/",
     ],
