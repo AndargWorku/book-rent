@@ -88,20 +88,17 @@ const ProductDetail = () => {
         <div className="lg:w-1/2 flex">
           {/* Thumbnails */}
           <div className="flex flex-col space-y-2 mr-4">
-            {product.images?.map((cover_image, index) => (
               <img
-                key={index}
-                src={cover_image}
+                src={product.cover_image}
                 alt="Thumbnail"
                 className="w-16 h-16 object-cover rounded-lg border-2 border-gray-300 cursor-pointer"
               />
-            ))}
           </div>
 
           {/* Main Image */}
           <div className="relative w-full">
             <img
-              src={product.images?.['']}
+              src={product.cover_image}
               alt={product.name}
               className="w-full h-auto object-cover rounded-lg"
             />
