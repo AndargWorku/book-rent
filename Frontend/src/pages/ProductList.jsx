@@ -68,7 +68,7 @@ const ProductList = () => {
   return (
     <div className="flex flex-col">
        <Navbar/>
-    <div className="p-4 max-w-7xl mx-auto ">
+    <div className="p-4 w-full mx-auto ">
       
       {/* Header Section */}
       <div className="flex items-center justify-between mb-4">

@@ -4,16 +4,34 @@ import ProductList from '../pages/ProductList';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import ProductDetail from '../pages/ProductDetail';
-import AdminRoutes from './AdminRoutes'; // Import the AdminRoutes component
+
+import Dashboard from '../Admin/Dashboard';
+import BookUpload from '../Admin/owener/BookUpload';
+import OwnerList from '../Admin/OwnerList';
+import Books from '../Admin/Books';
+import Notification from '../Admin/Notification';
+import Settings from '../Admin/Setting';
+import Logout from '../pages/Logout';
+
+
+import AdminPanel from '../pages/AdminPanel';
 
 const Routers = () => {
   return (
     <Routes>
       <Route path="/" element={<ProductList />} />
+      <Route path='/admin-panel' element={<AdminPanel/>}/>
       <Route path="/product/:id" element={<ProductDetail />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      {AdminRoutes()} {/* Include the AdminRoutes */}
+      <Route path="dashboard" element={<Dashboard />} />
+      <Route path="upload-book" element={<BookUpload />} />
+      <Route path="owner-list" element={<OwnerList />} />
+      <Route path="books" element={<Books />} />
+      <Route path="notification" element={<Notification />} />
+      <Route path="settings" element={<Settings />} />
+      <Route path="logout" element={<Logout />} />
+   
     </Routes>
   );
 }

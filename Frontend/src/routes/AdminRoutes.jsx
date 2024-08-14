@@ -1,5 +1,4 @@
-
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import AdminPanel from '../pages/AdminPanel';
 import Dashboard from '../Admin/Dashboard';
 import BookUpload from '../Admin/owener/BookUpload';
@@ -10,7 +9,7 @@ import Settings from '../Admin/Setting';
 import Logout from '../pages/Logout';
 
 const AdminRoutes = () => (
-  <>
+  <Routes>
     <Route path="/admin-panel" element={<AdminPanel />}>
       <Route path="dashboard" element={<Dashboard />} />
       <Route path="upload-book" element={<BookUpload />} />
@@ -20,7 +19,7 @@ const AdminRoutes = () => (
       <Route path="settings" element={<Settings />} />
       <Route path="logout" element={<Logout />} />
     </Route>
-  </>
+  </Routes>
 );
 
 export default AdminRoutes;

@@ -1,14 +1,20 @@
 
 
-import Layout from './components/layout/Layout'
+// import Layout from './components/layout/Layout'
+// import AdminPanel from './pages/AdminPanel'
+// import AdminRoutes from './routes/AdminRoutes'
 
-const App = () => {
-  return (<Layout/>
-    
-  )
-}
+// const App = () => {
+//   return (
+//     <div>
+//       <AdminPanel/>
+//   <Layout/>
+ 
+//   </div> 
+//   )
+// }
 
-export default App
+// export default App
 
 // import './App.css';
 // import { Outlet } from 'react-router-dom';
@@ -35,69 +41,64 @@ export default App
 
 
 
-// import './App.css'
-// import {  Route, Routes} from "react-router-dom"
-// import Dashboard from "./Admin/Dashboard"
-// import Login from "./pages/Login.jsx"
-// import Register from "./pages/Register.jsx"
-// import OwnerList from "./Admin/OwnerList.jsx"
-// import Setting from "./Admin/Setting.jsx"
-// import Notification from "./Admin/Notification.jsx"
-// import Books from "./Admin/Books.jsx"
-// import Sidebar from "./pages/Sidebar.jsx"
-// import BookUpload from './Admin/owener/BookUpload.jsx'
-// import ProductDetail from "./pages/ProductDetail"
-// import ProductList from './pages/ProductList.jsx'
-// import Logout from './pages/Logout.jsx'
-// // import Navbar from './pages/Navbar.jsx'
-// // import AdminPanel from './pages/AdminPanel.jsx'
+import './App.css'
+import {  Route, Routes} from "react-router-dom"
+import Dashboard from "./Admin/Dashboard"
+import Login from "./pages/Login.jsx"
+import Register from "./pages/Register.jsx"
+import OwnerList from "./Admin/OwnerList.jsx"
+
+import Notification from "./Admin/Notification.jsx"
+import Books from "./Admin/Books.jsx"
+
+import BookUpload from './Admin/owener/BookUpload.jsx'
+import ProductDetail from "./pages/ProductDetail"
+import ProductList from './pages/ProductList.jsx'
+import Logout from './pages/Logout.jsx'
+import AdminPanel from './pages/AdminPanel.jsx'
+import Settings from './Admin/Setting.jsx'
 
 
 
-// const App = () => {
-//   return (
-//     <div>
-//         {/* <Navbar/>  */}
-//         {/* <ProductList/>
-//         <ProductDetail/> */}
-//         {/* <ProductDetail/> */}
-//       {/* <AdminPanel/>
-//        */}
-         
-//       {/* <ProductCard/>
-      
-       
-//       {/* <Books/>
-//       <OwnerList/>
-//       <Register/>
-//       <Login/> */} 
+
+const App = () => {
+  return (
+    <div>
         
-//        <Sidebar>
+     <Routes>
+     
+      <Route path="/" element={<ProductList/>}/>
+      <Route path="/admin-panel" element={<AdminPanel />}>
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="upload-book" element={<BookUpload/>} />
+          <Route path="owner-list" element={<OwnerList />} />
+          <Route path="book" element={<Books />} />
+          <Route path="setting" element={<Settings />} />
+        
+        </Route>
+      <Route path='/admin-panel' element={<AdminPanel/>}/>
+   
     
-//      <Routes>
-     
-//       <Route path="/" element={<Dashboard/>}/>
-//       <Route path="/upload-book" element={<BookUpload/>}/>
-//       <Route path="/login" element={<Login/>}/>
-//       <Route path="/logout" element={<Logout/>}/>
-//       <Route path="/register" element={<Register/>}/>
-//       <Route path="/owner-liset" element={<OwnerList/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/logout" element={<Logout/>}/>
+      <Route path="/register" element={<Register/>}/>
+      <Route path="/owner-list" element={<OwnerList/>}/>
 
-//       <Route path="/notification" element={<Notification/>}/>
-//       <Route path="/setting" element={<Setting/>}/>
-//      <Route path="/book" element={<Books/>}/>
+      <Route path="/notification" element={<Notification/>}/>
+      
+     <Route path="/book" element={<Books/>}/>
      
-//      <Route path='/product-list' element={<ProductList/>}/>
-//      <Route path="/product/:id" element={<ProductDetail/>}/>
-//     </Routes>
-//     </Sidebar>    
+     <Route path='/dashboard' element={<Dashboard/>}/>
+     <Route path="/product/:id" element={<ProductDetail/>}/>
+    </Routes>
+      
           
-//     </div>
+    </div>
     
-//   )
-// }
+  )
+}
 
-// export default App
+export default App
 
 
 

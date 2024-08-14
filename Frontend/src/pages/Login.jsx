@@ -11,12 +11,12 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   
-  if (email === 'admin' && password === 'password') {
-    // On successful login, navigate to the admin panel
-    navigate('/admin-panel/dashboard');
-  } else {
-    alert('Invalid credentials');
-  }
+  // if (email === 'admin' && password === 'password') {
+  //   // On successful login, navigate to the admin panel
+  //   navigate('/admin-panel');
+  // } else {
+  //   alert('Invalid credentials');
+  // }
   const handleSubmit = async (e) => {
     e.preventDefault();
     //  setError(""); // Clear any existing error messages
@@ -37,7 +37,7 @@ const Login = () => {
         const data = await response.json();
         dispatch(addUser(data.user));
         console.log('some dsgfhg')
-        navigate('/admin-panel/dashboard');
+        navigate('/admin-panel');
       } else {
         setError(response.data.message || "Invalid email or password");
       }
