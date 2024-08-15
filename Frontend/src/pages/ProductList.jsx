@@ -103,11 +103,13 @@ const ProductList = () => {
         <div className="grid grid-cols-4 gap-4 py-4">
           {sortedProducts.slice(0, visibleCount).map((product) => (
             <div key={product.id} className="w-full p-2 flex-shrink-0 shadow-lg">
+              <Link to={`/product/${product.id}`} target="_self">
               <img
                 src={product.cover_image}
                 alt={product.name}
                 className="w-full h-24 object-cover rounded-md"
               />
+              </Link>
               <h3 className="text-sm font-medium mt-2 truncate">
                 <Link to={`/product/${product.id}`} target="_self">
                   {product.name}
