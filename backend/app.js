@@ -6,17 +6,18 @@ import bookRouter from "./routes/book-router.js";
 import rentalRouter from "./routes/rental-router.js";
 import db from "./db/index.js";
 
-// import bodyParser from "body-parser";
 
 
 const app = express();
-// app.use(bodyParser.json())
+
 app.use(express.json());
 app.use(
   cors({
     origin: [
       "https://book-rent-x75w.vercel.app/",
       "https://book-rent-x75w.vercel.app",
+      "https://book-rent-x75w-git-main-andargworkus-projects.vercel.app/",
+      "https://book-rent-x75w-git-main-andargworkus-projects.vercel.app",
       "http://localhost:5173",
       "http://localhost:5173/",
     ],

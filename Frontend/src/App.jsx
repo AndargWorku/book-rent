@@ -76,7 +76,7 @@ const App = () => {
           <Route path="setting" element={<Settings />} />
         
         </Route>
-      {/* <Route path='/admin-panel' element={<AdminPanel/>}/> */}
+    
    
     
       <Route path="/login" element={<Login/>}/>
