@@ -74,13 +74,13 @@ const BookUpload = () => {
       }
 
       console.log(form, "logged");
-      await fetch("https://book-rent-delta.vercel.app/books/",{
+      await fetch("https://book-rent-delta.vercel.app/books",{
         method : "POST",
         headers : {
           "Content-Type": "application/json",},
         body: JSON.stringify(form)
     }).then(
-      navigate("/product-list")); 
+      navigate("/")); 
     } catch (err) {
       setError(err.response?.data?.message || "Registration failed");
     }
