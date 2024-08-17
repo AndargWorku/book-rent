@@ -58,7 +58,7 @@ const AdminPanel = () => {
         </nav>
       </aside>
 
-      {/* Main content area */}
+     
       {/* <main className="flex-1  p-4 bg-white"> */}
         <Outlet />
       {/* </main> */}
