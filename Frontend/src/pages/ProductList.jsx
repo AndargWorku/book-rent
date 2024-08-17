@@ -12,7 +12,8 @@ const ProductList = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/books");
+      const response = await fetch("https://book-rent-delta.vercel.app/books");
+      // http://localhost:5000/books
       if (!response.ok) {
         throw new Error("Failed to fetch products");
       }

@@ -16,7 +16,8 @@ const ProductDetail = () => {
    
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/books/${id}`);
+        const response = await fetch(`https://book-rent-delta.vercel.app/books/${id}`);
+        // http://localhost:5000/books
        
         const data = await response.json();
         setProduct(data);
@@ -44,7 +45,8 @@ const ProductDetail = () => {
   // Function to handle form submission
   const handleFormSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:5000/rentals', {
+      const response = await fetch('https://book-rent-delta.vercel.app/rentals', {
+        // http://localhost:5000/rentals
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
