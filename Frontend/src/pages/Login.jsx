@@ -1,6 +1,6 @@
 import { GiBookmarklet } from "react-icons/gi";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../state/userSlice";
 
@@ -143,9 +143,9 @@ const Login = () => {
 
             <div className="text-sm text-center mt-4">
               Haven’t got an account?{' '}
-              <a href="/register" className="font-medium text-blue-600 hover:text-blue-500">
+              <Link to="/register" className="font-medium text-blue-600 hover:text-blue-500">
                 Sign up
-              </a>
+              </Link>
             </div>
           </form>
         </div>
