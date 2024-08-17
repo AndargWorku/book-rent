@@ -12,7 +12,7 @@ const BookStatusTable = () => {
 
   // Fetch books from the backend
   useEffect(() => {
-    fetch("http://localhost:5000/books")
+    fetch("https://book-rent-delta.vercel.app/books")
       .then((response) => response.json())
       .then((data) => setBooks(data))
       .catch((error) => console.error("Error fetching books:", error));
@@ -27,7 +27,7 @@ const BookStatusTable = () => {
   };
 
   const confirmDelete = () => {
-    fetch(`http://localhost:5000/books/${deleteBookId}`, {
+    fetch(`https://book-rent-delta.vercel.app/books/${deleteBookId}`, {
       method: "DELETE",
     })
       .then((response) => {
@@ -46,7 +46,7 @@ const BookStatusTable = () => {
   };
 
   const handleEditSave = () => {
-    fetch(`http://localhost:5000/books/${editBook.id}`, {
+    fetch(`https://book-rent-delta.vercel.app/books/${editBook.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

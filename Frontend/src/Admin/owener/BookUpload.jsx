@@ -74,7 +74,7 @@ const BookUpload = () => {
       }
 
       console.log(form, "logged");
-      await fetch("http://localhost:5000/books/",{
+      await fetch("https://book-rent-delta.vercel.app/books/",{
         method : "POST",
         headers : {
           "Content-Type": "application/json",},

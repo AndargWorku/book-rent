@@ -32,7 +32,7 @@ const OwnerList = () => {
   };
 
   const handleSave = async (id) => {
-    await fetch(`http://localhost:5000/users/${id}`,{
+    await fetch(`https://book-rent-delta.vercel.app/users/${id}`,{
       method : "PUT",
       headers : {
         "Content-Type": "application/json"},
@@ -53,7 +53,7 @@ const OwnerList = () => {
   };
 
   const confirmDelete = async () => {
-    await fetch(`http://localhost:5000/users/${selectedItem.id}`,{
+    await fetch(`https://book-rent-delta.vercel.app/users/${selectedItem.id}`,{
       method : "DELETE",
       headers : {
         "Content-Type": "application/json"},
@@ -63,7 +63,7 @@ const OwnerList = () => {
   };
 
   const confirmApprove = async () => {
-    await fetch(`http://localhost:5000/users/${selectedItem.id}`,{
+    await fetch(`https://book-rent-delta.vercel.app/users/${selectedItem.id}`,{
       method : "PUT",
       headers : {
         "Content-Type": "application/json"},
@@ -93,7 +93,7 @@ const OwnerList = () => {
   };
 
   const fetchOwners = async () => {
-    const response = await fetch("http://localhost:5000/users",{
+    const response = await fetch("https://book-rent-delta.vercel.app/users",{
       method : "GET",
       headers : {
         "Content-Type": "application/json"},

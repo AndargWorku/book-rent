@@ -110,7 +110,7 @@ const Books = () => {
   };
 
   const fetchBooks = async () => {
-    const response = await fetch("http://localhost:5000/books",{
+    const response = await fetch("https://book-rent-delta.vercel.app/books",{
       method : "GET",
       headers : {
         "Content-Type": "application/json"},
